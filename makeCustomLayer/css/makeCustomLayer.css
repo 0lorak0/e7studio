@@ -1,0 +1,307 @@
+/*
+        File:       makeCustomLayer.css
+        Author:     Karol Sanchez
+        Info:       styling for creating custom layer interface
+*/
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #C0C0C0;
+  font: sans-serif;
+}
+
+label, input, select {
+  margin: 5px;
+}
+
+form {
+  margin: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  position: relative;
+  margin-bottom: 4px;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 1px;
+}
+
+select[name="featureclass"] option {
+  font-size: .8em;
+}
+
+button {
+  margin-top: 10px;
+}
+
+ul {
+  border: 0 none;
+  list-style-type: none;
+  padding: 0;
+  width: 95%;
+  margin: 0;
+}
+
+.collapsibleBox {
+  padding: 0px 4px;
+  height: auto;
+  max-height: 999px;
+  margin: 4px;
+  -webkit-transition: max-height .2s ease-in-out;
+  -moz-transition: max-height .2s ease-in-out;
+  -o-transition: max-height .2s ease-in-out;
+  -ms-transition: max-height .2s ease-in-out;
+  transition: max-height .2s ease-in-out;
+  overflow: hidden;
+  font-size: 88%;
+}
+
+.sect {
+  background-color: #606060;
+  width: 90%;
+  display: inline-block;
+  padding: 5px 0px 5px 8px;
+  border-bottom: 3px solid black;
+  border-top: 3px solid black;
+  border-left: 0;
+  border-right: 0;
+  text-transform: uppercase;
+}
+
+.subSect {
+  background-color: #606060;
+  border: 0 none;
+  display: inline-block;
+  padding: 2px 8px;
+  width: 90%;
+}
+
+.subSect ~ p {
+  border: 0 none;
+  padding: 2px;
+}
+
+.arrow {
+  text-align: center;
+  cursor: pointer;
+  width: 10%;
+  display: inline-block;
+  margin: 0;
+  padding: 5px 0px 5px 0px;
+  border-bottom: 3px solid black;
+  border-top: 3px solid black;
+  border-left: 0;
+  border-right: 0;
+  background-color: #606060;
+}
+
+.arrow > span {
+  display: block;
+  -webkit-transition: -webkit-transform .2s ease-in-out;
+  -moz-transition: -moz-transform .2s ease-in-out;
+  -o-transition: -o-transform .2s ease-in-out;
+  -ms-transition: max-height .2s ease-in-out;
+  transition: transform .2s ease-in-out;
+}
+
+.collapsed > span {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=-1, M12=1.2246467991473532e-16, M21=-1.2246467991473532e-16, M22=-1, SizingMethod='auto expand')";
+}
+
+p.collapsed + div {
+  max-height: 0px !important;
+}
+
+.currentRuleChoice {
+  background-color: #C0C0C0 !important;
+}
+
+.ruleChoices > span {
+  background-color: rgba(0, 0, 0, 0);
+  float: right;
+  margin-right: 1px;
+  padding: 0 3px;
+  cursor: pointer;
+}
+
+.shortInput {
+  width: 50px;
+}
+
+.changeRuleStyle {
+  background-color: red;
+  cursor: pointer;
+}
+
+.deleteLayerX:before {
+  background-color: #000000;
+  bottom: 0;
+  content: "";
+  height: 10px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";
+  transform: rotate(-45deg);
+  width: 4px;
+}
+
+.deleteLayerX:after {
+  background-color: #000000;
+  bottom: 0;
+  content: "";
+  height: 10px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474, SizingMethod='auto expand')";
+  width: 4px;
+}
+
+.deleteLayerX {
+  background-color: #606060;
+  border-radius: 8px 8px 8px 8px;
+  height: 16px;
+  position: relative;
+  right: 8px;
+  width: 16px;
+  cursor: pointer;
+}
+
+.success, .error {
+  width: 100%;
+}
+
+.popUpShow {
+  background-color: black;
+  display: block;
+  height: auto;
+  padding: 20px 0px;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  text-align: center;
+  color: white;
+  margin: 6px 0 0;
+}
+
+.popUpShow > span {
+  display: inline-block;
+}
+
+.layerNameHighlight {
+  color: red;
+}
+
+.Hide {
+  display: none;
+}
+
+.deleteLayerConfirmationButton {
+  cursor: pointer;
+  padding: .5em;
+  margin: 1em 1em 0 1em;
+  background-color: #606060;
+}
+
+.deleteLayerConfirmationButton:hover {
+  color: black;
+}
+
+#rulesArrow.arrow {
+  border: 0px;
+  background-color: transparent;
+}
+
+#rulesBox > div {
+  background-color: #F2F2F2;
+  margin: 10px 5px;
+  padding: 4px;
+}
+
+#rulesBox > div > div {
+  border-bottom: 1px solid gray;
+}
+
+#messagesList {
+  width: 100%;
+}
+
+#messagesList li {
+  padding: 3px;
+  position: relative;
+}
+
+#messagesList  li div {
+  margin: 0;
+}
+
+#messagesList li:nth-child(n) div {
+  background-color: white;
+}
+
+#messagesList, #customLayersList {
+  position: relative;
+  width: 100%;
+}
+
+#customLayersList li {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+#customLayersList .collapsibleBox {
+  background-color: #FFFFFF;
+  margin: 0;
+  width: 100%;
+  overflow: auto;
+}
+
+.IEisLame .collapsibleBox, .IEisLame .arrow > span {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+.IEisLame .collapsed > span {
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
+  -ms-transform: none !important;
+  -o-transform: none !important;
+  -ms-filter: none !important;
+}
