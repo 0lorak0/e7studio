@@ -1,1 +1,7 @@
 Work for E7 Architecture Studio System Solutions internship
+
+  -FSQuery.php: PHP class to mimic mssql extension.  Uses Mapguide Open Source API.
+  -makeCustomLayers: create custom map layers from scratch by querying Mapguide feature sources
+  -common: javascript functions used in makeCustomLayers
+  -ExtJS Employee Database Application: non-production employee database app that allows viewing (fake) 
+    employee info.  If user has admin credentials allows editing of actual SQL Server 2008 tables form UI.
